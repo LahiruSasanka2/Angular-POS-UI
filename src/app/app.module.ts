@@ -9,6 +9,7 @@ import { ManageItemsComponent } from './manage-items/manage-items.component';
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import {RouterModule, Routes} from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRouts: Routes = [
   {
@@ -34,7 +35,11 @@ const appRouts: Routes = [
   {
     path: "",
     redirectTo: "/dashboard",
-    pathMatch: "full"
+    pathMatch: "full" //full | prefix
+  },
+  {
+    path: "**",
+    component: NotFoundComponent
   }
 ];
 
@@ -45,7 +50,8 @@ const appRouts: Routes = [
     ManageCustomersComponent,
     ManageItemsComponent,
     PlaceOrderComponent,
-    ViewOrdersComponent
+    ViewOrdersComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
