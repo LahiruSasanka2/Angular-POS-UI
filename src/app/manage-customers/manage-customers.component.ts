@@ -17,19 +17,19 @@ export class ManageCustomersComponent implements OnInit {
   ngOnInit() {
     this.loadAllCustomer();
   }
-  loadAllCustomer():void{
-    this.http.get<Customer[]>("http://localhost:8080/api/v1/customers").subscribe(customers1=>{
+  loadAllCustomer(): void {
+    this.http.get<Customer[]>('http://localhost:8080/api/v1/customers').subscribe(customers1 => {
       this.customers = customers1;
     });
   }
 
   deleteCustomer(customer: Customer): void {
-    this.http.delete("http://localhost:8080/api/v1/customers/" + customer.id,{observe:'response'}).subscribe(
+    this.http.delete('http://localhost:8080/api/v1/customers/' + customer.id, {observe: 'response'}).subscribe(
       response => {
-        if (response.status == 200){
+        if (response.status == 200) {
           this.loadAllCustomer();
         } else {
-          alert("Faild to Customer the Delete");
+          alert(' Faild to Customer the Delete ');
         }
       }
     );
