@@ -38,12 +38,13 @@ export class ManageCustomersComponent implements OnInit {
     this.http.post('http://localhost:8080/api/v1/customers',
       new Customer(id, name, address, salary), {observe: 'response'}).subscribe(
       response => {
-        if (response.status === 200) {
+        if (response.status === 201) {
           this.loadAllCustomer();
+          alert('Customer Added Ok !');
         } else {
           alert(' Faild to Customer the Delete ');
         }
       }
-    );
-
+      );
+  }
 }
