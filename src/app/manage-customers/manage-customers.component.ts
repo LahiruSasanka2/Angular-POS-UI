@@ -19,7 +19,7 @@ export class ManageCustomersComponent implements OnInit {
     });
   }
   deleteCustomer(customer: Customer): void {
-    
+    this.http.delete("http://localhost:8080/api/v1/customers/" + customer.id);
   }
 
 }
