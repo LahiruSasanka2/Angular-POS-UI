@@ -34,5 +34,16 @@ export class ManageCustomersComponent implements OnInit {
       }
     );
   }
+  saveCustomer(id: string, name: string, address: string, salary: number): void {
+    this.http.post('http://localhost:8080/api/v1/customers',
+      new Customer(id, name, address, salary), {observe: 'response'}).subscribe(
+      response => {
+        if (response.status === 200) {
+          this.loadAllCustomer();
+        } else {
+          alert(' Faild to Customer the Delete ');
+        }
+      }
+    );
 
 }
