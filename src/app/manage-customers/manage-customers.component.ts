@@ -45,6 +45,15 @@ export class ManageCustomersComponent implements OnInit {
           alert(' Faild to Customer the Delete ');
         }
       }
-      );
+     );
   }
 }
+
+
+
+
+
+
+
+
+
