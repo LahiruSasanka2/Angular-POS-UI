@@ -8,7 +8,30 @@ import { ManageCustomersComponent } from './manage-customers/manage-customers.co
 import { ManageItemsComponent } from './manage-items/manage-items.component';
 import { PlaceOrderComponent } from './place-order/place-order.component';
 import { ViewOrdersComponent } from './view-orders/view-orders.component';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRouts: Routes = [
+  {
+    path: "dashboard",
+    component: DashbordComponent
+  },
+  {
+    path: "manage-customers",
+    component: ManageCustomersComponent
+  },
+  {
+    path: "manage-items",
+    component: ManageItemsComponent
+  },
+  {
+    path: "place-order",
+    component: PlaceOrderComponent
+  },
+  {
+    path: "view-orders",
+    component: ViewOrdersComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -22,7 +45,7 @@ import {RouterModule} from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule.forRoot(appRouts)
   ],
   providers: [],
   bootstrap: [AppComponent]
