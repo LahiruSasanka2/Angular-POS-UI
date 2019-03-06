@@ -26,7 +26,7 @@ export class ManageCustomersComponent implements OnInit {
   deleteCustomer(customer: Customer): void {
     this.http.delete('http://localhost:8080/api/v1/customers/' + customer.id, {observe: 'response'}).subscribe(
       response => {
-        if (response.status == 200) {
+        if (response.status === 200) {
           this.loadAllCustomer();
         } else {
           alert(' Faild to Customer the Delete ');
