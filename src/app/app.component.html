@@ -8,31 +8,31 @@
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" href="#">
+            <a routerLink="/dashbord" class="nav-link active" href="#">
               <span data-feather="home"></span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a routerLink="manage-customers" class="nav-link" href="#">
               <span data-feather="file"></span>
               Manage Customer
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a routerLink="manage-items" class="nav-link" href="#">
               <span data-feather="shopping-cart"></span>
               Manage Item
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a routerLink="place-order" class="nav-link" href="#">
               <span data-feather="users"></span>
               Place Orders
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a routerLink="view-orders" class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
               View Orders
             </a>
@@ -42,7 +42,7 @@
     </nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-
+      <router-outlet></router-outlet>
     </main>
   </div>
 </div>
