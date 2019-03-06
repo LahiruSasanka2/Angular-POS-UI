@@ -10,38 +10,7 @@ import { PlaceOrderComponent } from './place-order/place-order.component';
 import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import {RouterModule, Routes} from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
-
-const appRouts: Routes = [
-  {
-    path: "dashboard",
-    component: DashbordComponent
-  },
-  {
-    path: "manage-customers",
-    component: ManageCustomersComponent
-  },
-  {
-    path: "manage-items",
-    component: ManageItemsComponent
-  },
-  {
-    path: "place-order",
-    component: PlaceOrderComponent
-  },
-  {
-    path: "view-orders",
-    component: ViewOrdersComponent
-  },
-  {
-    path: "",
-    redirectTo: "/dashboard",
-    pathMatch: "full" //full | prefix
-  },
-  {
-    path: "**",
-    component: NotFoundComponent
-  }
-];
+import {AppRouterModule} from './app.router.module';
 
 @NgModule({
   declarations: [
@@ -56,7 +25,7 @@ const appRouts: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRouts)
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
