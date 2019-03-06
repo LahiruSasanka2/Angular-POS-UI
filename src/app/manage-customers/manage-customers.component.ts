@@ -18,5 +18,8 @@ export class ManageCustomersComponent implements OnInit {
      this.customers = customers1;
     });
   }
+  deleteCustomer(customer: Customer): void {
+    
+  }
 
 }
