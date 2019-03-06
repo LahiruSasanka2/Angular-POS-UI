@@ -11,6 +11,7 @@ import { ViewOrdersComponent } from './view-orders/view-orders.component';
 import {RouterModule, Routes} from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {AppRouterModule} from './app.router.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {AppRouterModule} from './app.router.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppRouterModule
+    AppRouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
