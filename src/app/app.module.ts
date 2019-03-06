@@ -30,6 +30,11 @@ const appRouts: Routes = [
   {
     path: "view-orders",
     component: ViewOrdersComponent
+  },
+  {
+    path: "",
+    redirectTo: "/dashboard",
+    pathMatch: "full"
   }
 ];
 
