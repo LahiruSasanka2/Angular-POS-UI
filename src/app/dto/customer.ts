@@ -1,3 +1,3 @@
 export class Customer {
-  constructor(public cid: string, public name: string, public address: string, public salary: number){}
+  constructor(public id: string, public name: string, public address: string, public salary: number){}
 }
